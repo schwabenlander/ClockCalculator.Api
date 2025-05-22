@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockCalculator.Api", "ClockCalculator.Api\ClockCalculator.Api.csproj", "{3DA23BBD-FBED-4245-90C1-55DD38D0DF22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockCalculator.Tests", "ClockCalculator.Tests\ClockCalculator.Tests.csproj", "{40996FC0-8D1A-45AE-B3A6-5124B0EDA12F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3DA23BBD-FBED-4245-90C1-55DD38D0DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA23BBD-FBED-4245-90C1-55DD38D0DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA23BBD-FBED-4245-90C1-55DD38D0DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40996FC0-8D1A-45AE-B3A6-5124B0EDA12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40996FC0-8D1A-45AE-B3A6-5124B0EDA12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40996FC0-8D1A-45AE-B3A6-5124B0EDA12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40996FC0-8D1A-45AE-B3A6-5124B0EDA12F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
