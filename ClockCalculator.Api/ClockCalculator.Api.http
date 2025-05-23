@@ -6,3 +6,5 @@ GET {{ClockCalculatorApi_HostAddress}}/api/calculatetimeangle?hours={{hours}}&mi
 Accept: application/json
 
 ###
+
+GET {{ClockCalculatorApi_HostAddress}}/api/calculatetimeangle/{{hours}}%3A{{minutes}}
