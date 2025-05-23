@@ -2,12 +2,15 @@ namespace ClockCalculator.Api.Services;
 
 public class ClockCalculatorService : IClockCalculatorService
 {
-    // This could (should) be made more precise by taking into account the minute angle
-    // However, I would need to ask ChatGPT how to do that, so I'll keep it simple for now
-    public double CalculateHourAngle(int hours)
+    public double CalculateHourAngle(int hours, int minutes)
     {
         // Each hour represents 30 degrees
-        return hours * 30d;
+        var angle = hours * 30d;
+        
+        // Each minute represents 0.5 degrees
+        angle += minutes * 0.5d;
+
+        return angle;
     }
     
 
@@ -19,7 +22,7 @@ public class ClockCalculatorService : IClockCalculatorService
     
     public double CalculateTimeAngle(int hours, int minutes)
     {
-        var hourAngle = CalculateHourAngle(hours);
+        var hourAngle = CalculateHourAngle(hours, minutes);
         var minuteAngle = CalculateMinuteAngle(minutes);
         return hourAngle + minuteAngle;
     }
