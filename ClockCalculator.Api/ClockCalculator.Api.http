@@ -1,6 +1,6 @@
 @ClockCalculatorApi_HostAddress = http://localhost:5276
-@hours = 3
-@minutes = 0
+@hours = 9
+@minutes = 45
 
 GET {{ClockCalculatorApi_HostAddress}}/api/calculatetimeangle?hours={{hours}}&minutes={{minutes}}
 Accept: application/json
