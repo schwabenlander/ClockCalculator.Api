@@ -73,12 +73,11 @@ docker build -t clockcalculator-api .
 
 2. Run the container
 ```bash
-docker run -d -p 5276:5276 -p 7258:7258 --name clockcalculator-container clockcalculator-api
+docker run -d -p 5276:5276 --name clockcalculator-container clockcalculator-api
 ```
 
 The API will be available at:
 - HTTP: http://localhost:5276
-- HTTPS: https://localhost:7258
 
 ## Running Tests
 
