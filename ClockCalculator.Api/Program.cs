@@ -1,5 +1,6 @@
 using ClockCalculator.Api.Services;
 using ClockCalculator.Api.Endpoints;
+using ClockCalculator.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseMiddleware<RequestTimingMiddleware>();
 
 app.MapClockCalculatorEndpoints();
 
