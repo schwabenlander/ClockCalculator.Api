@@ -13,7 +13,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.MapScalarApiReference(); // Use Scalar middleware in development
+    app.MapScalarApiReference();
 }
 
 app.UseMiddleware<RequestTimingMiddleware>();
