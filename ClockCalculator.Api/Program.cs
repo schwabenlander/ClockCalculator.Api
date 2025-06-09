@@ -1,6 +1,7 @@
 using ClockCalculator.Api.Services;
 using ClockCalculator.Api.Endpoints;
 using ClockCalculator.Api.Middleware;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(); // Use Scalar middleware in development
 }
 
 app.UseMiddleware<RequestTimingMiddleware>();
