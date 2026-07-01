@@ -8,6 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IClockCalculatorService, ClockCalculatorService>();
 
+builder.Services.AddMcpServer()
+    .WithHttpTransport(options =>
+    {
+        options.Stateless = true;
+    })
+    .WithToolsFromAssembly();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -19,5 +26,6 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<RequestTimingMiddleware>();
 
 app.MapClockCalculatorEndpoints();
+app.MapMcp("/mcp");
 
 app.Run();
